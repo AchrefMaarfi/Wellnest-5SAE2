@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+
+    >
+    <TextView
+        android:id="@+id/textViewTitre"
+        android:layout_margin="16dp"
+        android:text="Titre : "
+        app:layout_constraintStart_toEndOf="@+id/textViewAdresse"
+        app:layout_constraintTop_toTopOf="@+id/textViewAdresse"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:hint="Adresse"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"/>
+
+    <TextView
+        android:id="@+id/textViewAdresse"
+        android:layout_below="@id/textViewTitre"
+        android:layout_margin="16dp"
+        android:text="Adresse : "
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"/>
+
+    <TextView
+        android:id="@+id/textViewDescription"
+
+        android:layout_below="@id/textViewAdresse"
+        android:layout_margin="16dp"
+        android:text="Description : "
+        app:layout_constraintStart_toEndOf="@+id/textViewAdresse"
+        app:layout_constraintTop_toTopOf="@+id/textViewAdresse"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"/>
+
+    <TextView
+        android:id="@+id/textViewType"
+
+        android:layout_below="@id/textViewDescription"
+        android:layout_margin="16dp"
+        android:text="Type : "
+        app:layout_constraintStart_toEndOf="@+id/textViewAdresse"
+        app:layout_constraintTop_toTopOf="@+id/textViewAdresse"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:hint="Adresse"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"/>
+    <TextView
+        android:id="@+id/textViewstatus"
+
+        android:layout_below="@id/textViewType"
+        android:layout_margin="16dp"
+        android:text="Type : "
+        app:layout_constraintStart_toEndOf="@+id/textViewAdresse"
+        app:layout_constraintTop_toTopOf="@+id/textViewAdresse"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:hint="Adresse"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"/>
+
+    <Button
+        android:id="@+id/buttonAccepter"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/textViewstatus"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="150dp"
+        android:onClick="onAcceptButtonClick"
+        android:text="Accepter" />
+
+    <Button
+        android:id="@+id/buttonRefuser"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_below="@id/buttonAccepter"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="150dp"
+        android:onClick="onRefuseButtonClick"
+        android:text="Refuser" />
+
+</RelativeLayout>

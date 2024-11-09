@@ -12,7 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Wellnest"
         tools:targetApi="31">
+        <activity
+            android:name=".User.Updateprofile"
+            android:exported="false" />
+        <activity
+            android:name=".User.profile"
+            android:exported="false" />
 
+        <activity
+            android:name=".User.Signin"
+            android:exported="false" />
+        <activity
+            android:name=".User.Signup"
+            android:exported="false" />
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
