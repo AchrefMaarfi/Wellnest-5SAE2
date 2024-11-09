@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+         <item
+             android:id="@+id/nav_home"
+             android:icon="@drawable/home_icon"
+             android:title="Home"/>
+        <item
+            android:id="@+id/nav_evenement"
+            android:icon="@drawable/home_icon"
+            android:title="Evenement"/>
+        <item
+            android:id="@+id/nav_produits"
+            android:icon="@drawable/home_icon"
+            android:title="Produits"/>
+        <item
+            android:id="@+id/nav_forum"
+            android:icon="@drawable/home_icon"
+            android:title="Forum"/>
+        <item
+            android:id="@+id/nav_reclamations"
+            android:icon="@drawable/info_icon"
+            android:title="Reclamations"/>
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/home_icon"
+            android:title="About"/>
+
+    </group>
+
+</menu>
