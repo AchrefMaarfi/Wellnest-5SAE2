@@ -1,4 +1,4 @@
-package com.esprit.wellnest;
+package com.esprit.wellnest.ui;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.esprit.wellnest.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class Sidebar extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {

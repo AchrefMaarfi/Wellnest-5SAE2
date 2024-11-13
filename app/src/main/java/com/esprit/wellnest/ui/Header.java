@@ -1,4 +1,4 @@
-package com.esprit.wellnest;
+package com.esprit.wellnest.ui;
 
 import android.os.Bundle;
 import android.view.View;
@@ -6,6 +6,8 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.esprit.wellnest.R;
 
 public class Header extends AppCompatActivity {
 
