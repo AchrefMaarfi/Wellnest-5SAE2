@@ -2,4 +2,12 @@
     <string name="app_name">Wellnest</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="hello_blank_fragment">hello</string>
+
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="introTitle">Explorer The<font color='#3f95ec'>\n World</font>  With Us</string>
+    <string name="subIntro"> this application wil Makes you See the world form Another side </string>
 </resources>

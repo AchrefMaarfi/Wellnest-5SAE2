@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="390dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/white_corner_bg"
+    android:elevation="3dp">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/pic"
+        android:layout_width="333dp"
+        android:layout_height="253dp"
+        android:layout_margin="8dp"
+
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.circleImageView"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="title"
+        android:textColor="@color/darBlue"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/starIcon"
+        app:layout_constraintStart_toStartOf="@+id/pic"
+        app:layout_constraintTop_toBottomOf="@id/pic"
+        />
+
+    <TextView
+        android:id="@+id/scoreTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="5"
+        android:textColor="@color/darBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/titleTxt"
+        app:layout_constraintEnd_toEndOf="@+id/pic"
+        app:layout_constraintTop_toTopOf="@+id/titleTxt"
+       />
+
+    <ImageView
+        android:id="@+id/starIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scoreTxt"
+        app:layout_constraintEnd_toStartOf="@+id/scoreTxt"
+        app:layout_constraintTop_toTopOf="@+id/scoreTxt"
+        app:srcCompat="@drawable/star" />
+
+    <ImageView
+        android:id="@+id/locationIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@id/titleTxt"
+        app:layout_constraintTop_toBottomOf="@id/titleTxt"
+        app:srcCompat="@drawable/location1" />
+
+    <TextView
+        android:id="@+id/addressTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="address"
+        app:layout_constraintBottom_toBottomOf="@id/locationIcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/locationIcon"
+        app:layout_constraintTop_toTopOf="@id/locationIcon" />
+
+
+
+    <TextView
+        android:id="@+id/priceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$0"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/locationIcon"
+        app:layout_constraintTop_toBottomOf="@id/addressTxt"
+        app:layout_constraintVertical_bias="0.206" />
+
+    <!-- New Like Icon TextView -->
+
+    <!-- New Like Text TextView -->
+
+    <!--   <TextView
+         android:id="@+id/likeIcon"
+         android:layout_width="49dp"
+         android:layout_height="46dp"
+         android:layout_marginStart="16dp"
+         android:layout_marginTop="4dp"
+         android:background="@drawable/like2"
+         android:textSize="18sp"
+         app:layout_constraintStart_toStartOf="@id/locationIcon"
+         app:layout_constraintTop_toBottomOf="@id/priceTxt" /> -->
+
+ </androidx.constraintlayout.widget.ConstraintLayout>

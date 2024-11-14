@@ -1,0 +1,20 @@
+<!-- res/drawable/edit_text_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+  <!-- Couleur de fond légèrement grise -->
+  <solid android:color="#F5F5F5" /> <!-- Couleur de fond gris clair -->
+
+  <corners android:radius="12dp" /> <!-- Coins plus arrondis -->
+
+  <stroke
+      android:width="1dp"
+  android:color="#B0BEC5" /> <!-- Couleur de bordure gris clair -->
+
+  <!-- Optionnel : ajouter un effet d'ombre -->
+  <padding
+      android:left="4dp"
+      android:top="4dp"
+      android:right="4dp"
+      android:bottom="4dp" />
+</shape>
