@@ -20,6 +20,7 @@ import com.esprit.wellnest.DAO.UserDao;
 import com.esprit.wellnest.R;
 import com.esprit.wellnest.database.AppDatabase;
 import com.esprit.wellnest.model.User;
+import com.esprit.wellnest.ui.Home;
 
 import org.mindrot.jbcrypt.BCrypt;
 
@@ -115,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                 runOnUiThread(() -> {
                     Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
                     // Navigate to the next screen, e.g., HomeActivity
-                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class); // Replace with the target activity
+                    Intent intent = new Intent(LoginActivity.this, Home.class); // Replace with the target activity
                     startActivity(intent);
                     finish();
                 });

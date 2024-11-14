@@ -1,0 +1,14 @@
+<!-- rounded_edittext_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Arrière-plan arrondi -->
+  <solid android:color="@color/white" />
+
+  <!-- Coins arrondis -->
+  <corners android:radius="12dp" />
+
+  <!-- Bordure légère -->
+  <stroke android:width="1dp" android:color="@color/lightGrey" />
+
+  <!-- Légère ombre (si supportée) -->
+  <padding android:left="8dp" android:right="8dp" android:top="4dp" android:bottom="4dp" />
+</shape>

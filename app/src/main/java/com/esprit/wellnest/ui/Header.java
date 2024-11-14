@@ -19,7 +19,7 @@ public class Header extends AppCompatActivity {
         setContentView(R.layout.sidebar);
 
         drawerLayout = findViewById(R.id.drawer_layout);
-        ImageView menuButton = findViewById(R.id.btn_menu);
+        ImageView menuButton = findViewById(R.id.btn_profile);
 
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override

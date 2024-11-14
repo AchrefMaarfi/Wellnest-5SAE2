@@ -29,4 +29,8 @@ public interface UserDao {
     void updatePassword(String email, String newPassword);
 
 
+    @Query("SELECT * FROM user_table WHERE id = :userId LIMIT 1")
+    User getUserById(int userId);
+
+
 }

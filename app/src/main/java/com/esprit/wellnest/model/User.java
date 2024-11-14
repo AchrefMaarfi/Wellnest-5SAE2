@@ -5,6 +5,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import lombok.Data;
+
+@Data
 @Entity(tableName = "user_table")
 public class User {
     @PrimaryKey(autoGenerate = true)
@@ -30,5 +33,4 @@ public class User {
         this.confirmationCode = confirmationCode;
         this.confirmed = false; // Default to false until confirmed
     }
-
 }

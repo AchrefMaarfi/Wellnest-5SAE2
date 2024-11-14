@@ -35,15 +35,18 @@
         <activity
             android:name=".ui.user.LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.user.RegisterActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!-- commented temporarly -->
+
+<!--        <activity-->
+<!--            android:name=".ui.user.RegisterActivity"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
 
 <!--        <activity android:name=".Home"-->
 <!--            android:exported="true">-->
