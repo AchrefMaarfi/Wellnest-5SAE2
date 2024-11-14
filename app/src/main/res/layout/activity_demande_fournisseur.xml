@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bi"
+    tools:context=".demandes.DemandeFournisseur">
+
+
+
+    <TextView
+        android:id="@+id/textViewAdresse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Adresse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextAdresse"
+        app:layout_constraintStart_toEndOf="@+id/textViewAdresse"
+        app:layout_constraintTop_toTopOf="@+id/textViewAdresse"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:hint="Adresse"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description de domaine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAdresse"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        app:layout_constraintStart_toEndOf="@+id/textViewDescription"
+        app:layout_constraintTop_toTopOf="@+id/textViewDescription"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:hint="Description"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt" />
+
+    <TextView
+        android:id="@+id/textViewtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type de produits"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescription"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTexttype"
+        app:layout_constraintStart_toEndOf="@+id/textViewtype"
+        app:layout_constraintTop_toTopOf="@+id/textViewtype"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:hint="Description"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"/>
+
+    <TextView
+        android:id="@+id/textViewtitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titre de demande"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTexttype"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/editTexttitre"
+        app:layout_constraintStart_toEndOf="@+id/textViewtitre"
+        app:layout_constraintTop_toTopOf="@+id/textViewtitre"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:hint="Description"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"/>
+
+
+
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Envoyer la demande"
+        app:layout_constraintTop_toBottomOf="@+id/editTexttitre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

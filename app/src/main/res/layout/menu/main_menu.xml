@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_item_home"
+        android:title="Accueil"/>
+    <item
+        android:id="@+id/menu_item_profile"
+        android:title="Profil"/>
+    <item
+        android:id="@+id/menu_item_reclamations"
+        android:title="Réclamations"/>
+</menu>

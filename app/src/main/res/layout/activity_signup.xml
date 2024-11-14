@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/bi"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".user.Signup">
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Créer un compte"
+        android:textColor="#FFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nom"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/dt"
+            android:ems="10"
+            android:hint="Nom"
+            android:paddingLeft="20sp"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview2" />
+        <EditText
+            android:id="@+id/prenom"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50sp"
+            android:ems="10"
+            android:textColor="#FFF"
+            android:hint="Prénom"
+            android:textSize="20sp"
+            android:paddingLeft="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/dt"
+            app:layout_constraintTop_toBottomOf="@+id/nom" />
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:hint="Username"
+        android:textSize="20sp"
+        android:paddingLeft="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"
+        app:layout_constraintTop_toBottomOf="@+id/prenom" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:paddingLeft="20sp"
+        android:hint="Mot de passe"
+        android:textSize="20sp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+    <EditText
+        android:id="@+id/confirmpassword"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50sp"
+        android:ems="10"
+        android:textColor="#FFF"
+        android:paddingLeft="20sp"
+        android:hint="Confirmer Mot de passe"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/dt"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50sp"
+            android:ems="10"
+            android:textColor="#FFF"
+            android:paddingLeft="20sp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/dt"
+            app:layout_constraintTop_toBottomOf="@+id/confirmpassword" />
+        <Spinner
+            android:id="@+id/roleSpinner"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="50dp"
+            android:ems="10"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/dt"
+            app:layout_constraintTop_toBottomOf="@+id/mail" />
+
+
+        <Button
+        android:id="@+id/buttonsingup"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50sp"
+        android:text="Sign Up"
+        android:textColor="#fff"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roleSpinner"
+        />
+        <Button
+            android:id="@+id/btnChooseImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choisir une image"
+            app:layout_constraintTop_toBottomOf="@+id/buttonsingup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnChooseImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
