@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId = "com.esprit.wellnest"
-        minSdk = 27
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -26,16 +26,15 @@ android {
         }
     }
 
-    viewBinding {
-        enable = true
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    packagingOptions {
+
+    packaging{
         resources {
+            excludes += "META-INF/NOTICE.md"
+
             excludes += "META-INF/LICENSE.md"
         }
     }
