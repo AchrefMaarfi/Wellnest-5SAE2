@@ -9,8 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.projet.mobileuser.R;
-import com.projet.mobileuser.bdconfiguration.DBHelper;
+import com.esprit.wellnest.R;
+import com.esprit.wellnest.bdconfiguration.DBHelper;
 
 public class AjoutProduit extends AppCompatActivity {
 
