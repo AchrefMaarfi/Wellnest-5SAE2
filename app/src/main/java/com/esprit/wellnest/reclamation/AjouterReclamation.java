@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.esprit.wellnest.Home;
+import com.esprit.wellnest.ui.Home;
 import com.esprit.wellnest.R;
 
 
