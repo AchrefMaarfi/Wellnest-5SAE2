@@ -257,19 +257,21 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public String getFournisseurStatus(String username) {
-        SQLiteDatabase DB = this.getReadableDatabase();
-        String status = null;
 
-        Cursor cursor = DB.rawQuery("SELECT status FROM demandefournisseur WHERE username=?", new String[]{username});
+        public String getFournisseurStatus(String username) {
+            SQLiteDatabase DB = this.getReadableDatabase();
+            String status = null;
 
-        if (cursor.moveToFirst()) {
-            status = cursor.getString(cursor.getColumnIndex("status"));
+            Cursor cursor = DB.rawQuery("SELECT status FROM demandefournisseur WHERE username=?", new String[]{username});
+
+            if (cursor.moveToFirst()) {
+                status = cursor.getString(cursor.getColumnIndex("status"));
+            }
+
+            cursor.close();
+            return status;
         }
 
-        cursor.close();
-        return status;
-    }
 
 
     public Map<String, String> DemandeByUser(String username) {
@@ -496,3 +498,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 }
+
+
+
+
+
+

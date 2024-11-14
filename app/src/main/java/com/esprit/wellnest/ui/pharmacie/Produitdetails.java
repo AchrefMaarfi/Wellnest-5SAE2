@@ -10,10 +10,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.projet.mobileuser.Panier;
-import com.projet.mobileuser.PanierActivity;
-import com.projet.mobileuser.R;
-import com.projet.mobileuser.reclamations.Ajoutreclamation;
+import com.esprit.wellnest.R;
+
+import com.esprit.wellnest.reclamation.AjouterReclamation;
 
 import java.util.List;
 
@@ -90,7 +89,7 @@ public class Produitdetails extends AppCompatActivity {
             public void onClick(View v) {
                 String nomProduit = textViewNomProduit.getText().toString();
 
-                Intent intent = new Intent(Produitdetails.this, Ajoutreclamation.class);
+                Intent intent = new Intent(Produitdetails.this, AjouterReclamation.class);
                 intent.putExtra("nomProduit", nomProduit);
                 startActivity(intent);
             }

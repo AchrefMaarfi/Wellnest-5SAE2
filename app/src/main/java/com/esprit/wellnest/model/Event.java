@@ -14,6 +14,7 @@ import com.esprit.wellnest.service.Converters;
 import java.util.Date;
 import java.util.List;
 
+
 @Entity(tableName = "events")
 public class Event implements Parcelable {
     @ColumnInfo(name = "event_id")
@@ -194,4 +195,6 @@ public class Event implements Parcelable {
     public void setUser(User user) {
         this.user = user;
     }
+
 }
+

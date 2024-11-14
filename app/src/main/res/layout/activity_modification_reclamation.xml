@@ -1,0 +1,35 @@
+<!-- res/layout/activity_modification_reclamation.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bi"
+    tools:context=".reclamations.Modification_reclamation">
+
+    <EditText
+        android:id="@+id/editTextNouvelleDescription"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/dt"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:paddingLeft="20sp"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:hint="Description"/>
+
+    <Button
+        android:id="@+id/buttonEnregistrer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="Enregistrer"/>
+</LinearLayout>
