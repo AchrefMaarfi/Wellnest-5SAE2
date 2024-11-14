@@ -25,6 +25,9 @@ android {
             )
         }
     }
+    viewBinding {
+        enable = true
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -61,7 +64,7 @@ dependencies {
     implementation(libs.android.mail)
     implementation(libs.android.activation)
 
-    // wiem
+
     implementation("com.github.ismaeldivita:chip-navigation-bar:1.4.0")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
     implementation("com.github.bumptech.glide:glide:4.12.0")
@@ -69,7 +72,7 @@ dependencies {
     implementation(libs.ssp)
     implementation(libs.roundedimageview)
 
-    // mahdi
+
     implementation("com.google.android.material:material:1.6.0") // Check the latest version
 
     implementation("com.squareup.okhttp3:okhttp:4.9.3")

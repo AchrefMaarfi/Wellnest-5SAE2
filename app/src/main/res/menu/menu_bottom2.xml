@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+<item
+    android:id="@+id/home"
+    android:icon="@drawable/bottom_btn1"
+    android:title="Home"
+
+    app:cnb_backgroundColor="@color/blue"
+    app:cnb_iconColor="@color/white"
+    />
+
+
+    <item
+        android:id="@+id/Hebergement"
+        android:icon="@drawable/hebergement"
+        android:title="Hebergement"
+        app:cnb_backgroundColor="@color/blue"
+        app:cnb_iconColor="@color/white"
+        />
+    <item
+        android:id="@+id/reservationHebergement"
+        android:icon="@drawable/reserved"
+        android:title="Reservation_Hebergement"
+        app:cnb_backgroundColor="@color/blue"
+        app:cnb_iconColor="@color/white"
+        />
+
+    <item
+        android:id="@+id/mon_Hebergement"
+        android:icon="@drawable/hebergement"
+        android:title="Mon_Hebergement"
+        app:cnb_backgroundColor="@color/blue"
+        app:cnb_iconColor="@color/white"
+        />
+    <item
+        android:id="@+id/evenement"
+        android:icon="@drawable/reservation"
+        android:title="Evenement"
+        app:cnb_backgroundColor="@color/blue"
+        app:cnb_iconColor="@color/white"
+        />
+    <item
+        android:id="@+id/evenement_ajout"
+        android:icon="@drawable/reservation"
+        android:title="ajout event"
+        app:cnb_backgroundColor="@color/blue"
+        app:cnb_iconColor="@color/white"
+        />
+
+
+
+</menu>
