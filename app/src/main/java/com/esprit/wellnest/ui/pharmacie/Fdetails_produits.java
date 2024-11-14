@@ -10,9 +10,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import com.esprit.wellnest.bdconfiguration.DBHelper;
+import com.esprit.wellnest.R;
 
-import com.projet.mobileuser.R;
-import com.projet.mobileuser.bdconfiguration.DBHelper;
 
 public class Fdetails_produits extends AppCompatActivity {
     Button buttonmodifier,buttondelete;
