@@ -3,5 +3,5 @@ package com.esprit.wellnest.DAO;
 import androidx.room.Dao;
 
 @Dao
-public interface ReclamationDAO {
+public interface EventDao {
 }
