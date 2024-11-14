@@ -7,12 +7,13 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-import com.esprit.wellnest.DAO.EventDAO;
-import com.esprit.wellnest.DAO.ForumDAO;
-import com.esprit.wellnest.DAO.PharmacieDAO;
-import com.esprit.wellnest.DAO.ReclamationDAO;
-import com.esprit.wellnest.DAO.ReservationDAO;
-import com.esprit.wellnest.DAO.UserDAO;
+
+import com.esprit.wellnest.DAO.EventDao;
+import com.esprit.wellnest.DAO.ForumDao;
+import com.esprit.wellnest.DAO.PharmacieDao;
+import com.esprit.wellnest.DAO.ReclamationDao;
+import com.esprit.wellnest.DAO.ReservationDao;
+import com.esprit.wellnest.DAO.UserDao;
 import com.esprit.wellnest.model.Event;
 import com.esprit.wellnest.model.Forum;
 import com.esprit.wellnest.model.Pharmacie;
@@ -28,12 +29,12 @@ public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase instance;
 
     // Abstract methods to access the DAOs
-    public abstract UserDAO userDAO();
-    public abstract EventDAO eventDAO();
-    public abstract ReservationDAO reservationDAO();
-    public abstract ReclamationDAO reclamationDAO();
-    public abstract PharmacieDAO pharmacieDAO();
-    public abstract ForumDAO forumDAO();
+    public abstract UserDao userDao();
+    public abstract EventDao eventDao();
+    public abstract ReservationDao reservationDao();
+    public abstract ReclamationDao reclamationDao();
+    public abstract PharmacieDao pharmacieDao();
+    public abstract ForumDao forumDao();
 
     public static synchronized AppDatabase getInstance(Context context) {
         if (instance == null) {
