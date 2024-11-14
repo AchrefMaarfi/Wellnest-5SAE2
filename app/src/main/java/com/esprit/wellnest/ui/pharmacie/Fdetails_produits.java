@@ -14,6 +14,7 @@ import com.esprit.wellnest.bdconfiguration.DBHelper;
 import com.esprit.wellnest.R;
 
 
+
 public class Fdetails_produits extends AppCompatActivity {
     Button buttonmodifier,buttondelete;
     TextView textViewNomProduit, textViewMarqueProduit,

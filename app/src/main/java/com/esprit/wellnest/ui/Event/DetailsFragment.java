@@ -104,7 +104,7 @@ public class DetailsFragment extends Fragment {
         }
 
         // Load user information associated with the event
-        loadUserById(event.getUser().getId());
+        loadUserById(event.getUser().id);
 
         // Set up button click listener for delete
         deleteButton.setOnClickListener(v -> {

@@ -257,6 +257,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
+
         public String getFournisseurStatus(String username) {
             SQLiteDatabase DB = this.getReadableDatabase();
             String status = null;
@@ -270,6 +271,7 @@ public class DBHelper extends SQLiteOpenHelper {
             cursor.close();
             return status;
         }
+
 
 
     public Map<String, String> DemandeByUser(String username) {

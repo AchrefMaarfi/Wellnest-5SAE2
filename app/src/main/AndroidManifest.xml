@@ -35,6 +35,9 @@
         <activity
             android:name=".ui.user.LoginActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.Event.MainActivity"
+            android:exported="false" />
 
         <!-- commented temporarly -->
 
