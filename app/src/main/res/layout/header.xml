@@ -44,7 +44,9 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:background="@color/white"
-        android:scrollbars="none">
+        android:scrollbars="horizontal"
+        android:scrollbarFadeDuration="@integer/material_motion_duration_long_2"
+        >
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -58,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:paddingHorizontal="16dp"
-                android:backgroundTint="@color/teal_200"
+                android:backgroundTint="@color/light_green"
                 android:text="Resservation"
                 android:textColor="@android:color/white" />
 
@@ -68,7 +70,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:paddingHorizontal="16dp"
-                android:backgroundTint="@color/teal_200"
+                android:backgroundTint="@color/light_green"
+                android:textColorHint="@color/black"
                 android:text="Pharmacie"
                 android:textColor="@android:color/white" />
 
@@ -77,8 +80,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:backgroundTint="@color/teal_200"
+                android:backgroundTint="@color/light_green"
                 android:paddingHorizontal="16dp"
+                android:textColorHighlight="@color/black"
                 android:text="Event"
                 android:textColor="@android:color/white" />
 
@@ -88,17 +92,17 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:paddingHorizontal="16dp"
-                android:backgroundTint="@color/teal_200"
+                android:backgroundTint="@color/light_green"
                 android:text="Forum"
                 android:textColor="@android:color/white" />
 
             <Button
-                android:id="@+id/service5Button"
+                android:id="@+id/btn_reclamation_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:paddingHorizontal="16dp"
-                android:backgroundTint="@color/teal_200"
+                android:backgroundTint="@color/light_green"
                 android:text="Reclamation"
                 android:textColor="@android:color/white" />
         </LinearLayout>
