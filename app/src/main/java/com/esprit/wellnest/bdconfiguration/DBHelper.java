@@ -28,7 +28,7 @@ public class DBHelper extends SQLiteOpenHelper {
         DB.execSQL("create table demandefournisseur(titre TEXT primary key, username TEXT, adresse TEXT, domaineDescription TEXT, activiteInfo TEXT,status TEXT)");
         DB.execSQL("create table produits(nom  TEXT primary key, username TEXT, marque TEXT, prix  TEXT, quantite  TEXT)");
 
-        DB.execSQL("create table reclamations(titrereclamation TEXT primary key , username TEXT, titre_produit TEXT, description TEXT)");
+        DB.execSQL("create table reclamations(sujet TEXT primary key , email TEXT, sujet TEXT, description TEXT, image TEXT)");
 
 
     }
@@ -372,11 +372,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
         while (cursor.moveToNext()) {
             Map<String, String> reclamationmap = new HashMap<>();
-            reclamationmap.put("titrereclamation", cursor.getString(cursor.getColumnIndex("titrereclamation")));
+            reclamationmap.put("sujet", cursor.getString(cursor.getColumnIndex("sujet")));
             reclamationmap.put("description", cursor.getString(cursor.getColumnIndex("description")));
-            reclamationmap.put("username", cursor.getString(cursor.getColumnIndex("username")));
-            reclamationmap.put("titre_produit", cursor.getString(cursor.getColumnIndex("titre_produit")));
-
+            reclamationmap.put("email", cursor.getString(cursor.getColumnIndex("email")));
 
             reclamations.add(reclamationmap);
         }
@@ -393,14 +391,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public boolean insererReclamation(String username, String titre_produit, String description, String titrereclamation) {
+    public boolean insererReclamation(String email, String sujet, String categorie, String description, String imageBase64) {
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
-        contentValues.put("username", username);
-        contentValues.put("titre_produit", titre_produit);
+        contentValues.put("email", email);
+        contentValues.put("sujet", sujet);
+        contentValues.put("sujet", categorie);
         contentValues.put("description", description);
-        contentValues.put("titrereclamation", titrereclamation);
+        contentValues.put("image", imageBase64);
 
         long result = DB.insert("reclamations", null, contentValues);
         DB.close();
@@ -410,15 +409,15 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
 
-    public List<Map<String, String>>getReclamationsByUser(String username) {
+    public List<Map<String, String>>getReclamationsByUser(String email) {
         List<Map<String, String>> reclamations = new ArrayList<>();
         SQLiteDatabase DB = this.getReadableDatabase();
 
-        Cursor cursor = DB.rawQuery("SELECT * FROM reclamations WHERE username=?", new String[]{username});
+        Cursor cursor = DB.rawQuery("SELECT * FROM reclamations WHERE email=?", new String[]{email});
 
         while (cursor.moveToNext()) {
             Map<String, String> reclamationmap = new HashMap<>();
-            reclamationmap.put("titrereclamation", cursor.getString(cursor.getColumnIndex("titrereclamation")));
+            reclamationmap.put("sujet", cursor.getString(cursor.getColumnIndex("sujet")));
             reclamationmap.put("description", cursor.getString(cursor.getColumnIndex("description")));
 
 
@@ -428,6 +427,27 @@ public class DBHelper extends SQLiteOpenHelper {
         cursor.close();
         DB.close();
         return reclamations;
+    }
+
+
+
+    public boolean updateDescriptionReclamation( String email,String nouvelleDescription) {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("description", nouvelleDescription);
+
+        int result = DB.update("reclamations", contentValues, "email=?", new String[]{email});
+        DB.close();
+
+        return result != -1;
+    }
+
+
+    public boolean supprimerReclamation(String sujet) {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        int result = DB.delete("reclamations", "sujet=?", new String[]{sujet});
+        DB.close();
+        return result != -1;
     }
 
     public boolean updateproduit( String username,String nomProduit1,String marqueedit1,String prixedit1,String quantiteedi1) {
@@ -443,27 +463,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
         return result != -1;
     }
-
-    public boolean updateDescriptionReclamation( String username,String nouvelleDescription) {
-        SQLiteDatabase DB = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("description", nouvelleDescription);
-
-        int result = DB.update("reclamations", contentValues, "username=?", new String[]{username});
-        DB.close();
-
-        return result != -1;
-    }
-
-
-    public boolean supprimerReclamation(String titrereclamation) {
-        SQLiteDatabase DB = this.getWritableDatabase();
-        int result = DB.delete("reclamations", "titrereclamation=?", new String[]{titrereclamation});
-        DB.close();
-        return result != -1;
-    }
-
-
 
 
     public boolean deleteproduct(String nom) {

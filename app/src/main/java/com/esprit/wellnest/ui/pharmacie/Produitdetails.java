@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.esprit.wellnest.R;
 
-import com.esprit.wellnest.reclamation.AjouterReclamation;
+import com.esprit.wellnest.ui.reclamations.AjouterReclamation;
 
 import java.util.List;
 

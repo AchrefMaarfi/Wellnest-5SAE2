@@ -7,24 +7,137 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     >
-    <include
-        layout="@layout/header"
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/header_icons"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical|center_horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="76dp"
+            android:layout_height="70dp"
+            app:srcCompat="@drawable/logo" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/btn_profile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="profile"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            app:srcCompat="@drawable/person_icon" />
+    </LinearLayout>
+
+    <!-- Scrollable Services Section -->
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:padding="8dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/header_icons"
+        android:scrollbars="horizontal"
+        android:scrollbarFadeDuration="@integer/material_motion_duration_long_2"
+        >
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Service Buttons -->
+            <Button
+                android:id="@+id/service1Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:paddingHorizontal="16dp"
+                android:backgroundTint="@color/light_green"
+                android:text="Resservation"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/service2Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:paddingHorizontal="16dp"
+                android:backgroundTint="@color/light_green"
+                android:textColorHint="@color/black"
+                android:text="Pharmacie"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/service3Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/light_green"
+                android:paddingHorizontal="16dp"
+                android:textColorHighlight="@color/black"
+                android:text="Event"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/service4Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:paddingHorizontal="16dp"
+                android:backgroundTint="@color/light_green"
+                android:text="Forum"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_reclamation_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:paddingHorizontal="16dp"
+                android:backgroundTint="@color/light_green"
+                android:text="Reclamation"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+>
     <Button
         android:id="@+id/btn_ajouter_rec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/green"
         android:text="Ajouter Reclamation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+
         tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/btn_list_rec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:text="List Reclamation"
+
+        tools:ignore="MissingConstraints" />
+</LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
